@@ -1,0 +1,7 @@
+{
+  "name": "Bellota",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
