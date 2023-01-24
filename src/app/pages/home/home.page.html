@@ -1,0 +1,22 @@
+<ion-content>
+  <div *ngIf="parrots">
+    <app-map [parrots]="parrots" (clickMarker)="clickMarker($event)"></app-map>
+  </div>
+
+  <ion-fab slot="fixed" horizontal="end" vertical="bottom">
+    <ion-fab-button (click)="addBellota()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-card *ngIf="marker?.selected">
+    <ion-card-header>
+      <ion-card-title>BELLOTA</ion-card-title>
+      <ion-card-subtitle>{{marker.marker.name}} - {{marker.marker.date}}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{marker.marker.message}}
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

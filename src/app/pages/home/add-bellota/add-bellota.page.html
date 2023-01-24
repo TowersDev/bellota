@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-title>New bellota</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <form [formGroup]="ionicForm" (ngSubmit)="submitForm()">
+    <ion-item lines="full" class="inputs">
+      <ion-textarea cols="10" autoGrow="true" formControlName="message" placeholder="Introduce el mensaje" required maxlength = "200"></ion-textarea>
+    </ion-item>
+    <div class="button-class">
+      <ion-button type="submit" color="danger" expand="block">Registrar</ion-button>
+    </div>
+  </form>
+</ion-content>
